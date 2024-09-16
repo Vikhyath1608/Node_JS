@@ -17,3 +17,22 @@ const {uname,age,email="No email provided"}=user;
 console.log(uname);
 console.log(age);
 console.log(email);
+
+//destructing nested array
+const responce={
+    status:200,
+    data:{
+        user:{
+            usrName:"vikhyath",
+            address:{
+                city:"puttur",
+                country:"India",
+            }
+        }
+    }
+};
+
+const { status, data: { user: { usrName, address: { city, country } } } } = responce;
+console.log(usrName); 
+console.log(city);    
+console.log(country); 
